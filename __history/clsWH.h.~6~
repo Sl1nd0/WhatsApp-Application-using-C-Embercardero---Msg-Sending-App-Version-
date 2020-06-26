@@ -1,0 +1,18 @@
+#ifndef clsWH
+#define clsWH
+
+class TbackWhat
+{
+
+	private:
+
+	public:
+
+		TbackWhat();
+		getName();
+		getNumber();
+		getGender();
+        getProv();
+};
+
+#endif

@@ -1,0 +1,223 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+
+#include "Unit1.h"
+#include "clsWH.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+TForm1 *Form1;
+//---------------------------------------------------------------------------
+__fastcall TForm1::TForm1(TComponent* Owner)
+	: TForm(Owner)
+{
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm1::checkClick(TObject *Sender)
+{
+	TStreamReader *myFil = new TStreamReader("..\\..\\..\\conData\\convo1.txt");
+
+	AnsiString rLine;
+	ListBox1->Clear();
+	while (!myFil->EndOfStream)
+	{
+
+	rLine = myFil->ReadLine();
+	ListBox1->Items->Add(rLine);
+	}
+
+	myFil->Close();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::FormShow(TObject *Sender)
+{
+    TStreamReader *myFil = new TStreamReader("..\\..\\..\\conData\\convo1.txt");
+
+	AnsiString rLine;
+	ListBox1->Clear();
+	while (!myFil->EndOfStream)
+	{
+
+	rLine = myFil->ReadLine();
+	ListBox1->Items->Add(rLine);
+	}
+
+	myFil->Close();
+	wImage->Picture->LoadFromFile("..\\..\\wImages\\is(5).bmp");
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::dltButtClick(TObject *Sender)
+{
+	ListBox1->Clear();
+
+    TStreamReader *myFil = new TStreamReader("..\\..\\..\\conData\\convo1.txt");
+
+	AnsiString rLine;
+	ListBox1->Clear();
+	while (!myFil->EndOfStream)
+	{
+
+	rLine = myFil->ReadLine();
+	ListBox1->Items->Add(rLine);
+	}
+
+	myFil->Close();
+
+	AnsiString oneLine;
+
+	TStreamWriter *myFile = new TStreamWriter("..\\..\\..\\conData\\convo1.txt", false);
+
+	oneLine ="";
+	//ListBox1->Clear();
+	//ListBox1->Items->Add(oneLine);
+
+	myFile->WriteLine(oneLine);
+	myFile->Close();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::chtButtClick(TObject *Sender)
+{
+    AnsiString msg1 = InputBox("Chat", "Type a message: ", " ");
+	AnsiString oneLine;
+
+	TStreamWriter *myFile = new TStreamWriter("..\\..\\..\\conData\\convo1.txt", true);
+
+	oneLine = aStuff[numInd].getName() + ": ";
+	oneLine += msg1;
+	//ListBox1->Clear();
+	ListBox1->Items->Add(oneLine);
+
+	myFile->WriteLine(oneLine);
+	myFile->Close();
+}
+//---------------------------------------------------------------------------
+
+AnsiString TForm1::getOneline(AnsiString temp, int fieldNr)
+{
+
+	AnsiString mLine;
+
+	for (int i = 1; i <= fieldNr; i++) {
+	   if (temp.Pos(",") > 0)
+			{
+			   mLine = temp.SubString(1, temp.Pos(",") - 1);
+			   temp.Delete(1, temp.Pos(","));
+
+			} else {
+			   mLine = temp;
+			}
+	}
+      return mLine;
+}
+//---------------------------------------------------------------------------
+
+
+
+void __fastcall TForm1::populateClick(TObject *Sender)
+{
+
+   /*	ShowMessage(aStuff[2].getName());
+	ShowMessage(aStuff[2].getNumber());
+	ShowMessage(aStuff[2].getProv());
+	ShowMessage(aStuff[2].getGender()); */
+
+	AnsiString oneLine;
+	AnsiString test;
+	AnsiString wLine;
+	TStreamReader *inFile = new TStreamReader("..\\..\\wData\\phoneData.csv");
+
+	int i = 0;
+	//wLine = inFile->ReadLine();
+
+	test = getOneline(wLine, 3);
+	ShowMessage(wLine);
+	ShowMessage(test);
+
+	lstSupport->Clear();
+	chtBox->Clear();
+	while(!inFile->EndOfStream)
+	{
+		//lstSupport->Items->Add(inFile->ReadLine());
+		oneLine = inFile->ReadLine();
+
+		lstSupport->Items->Add(oneLine);
+		i++;
+	}
+	inFile->Close();
+
+	maxRecords = i;
+	i = 0;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::logClick(TObject *Sender)
+{
+	AnsiString oneLine;
+    AnsiString oneLine2;
+	AnsiString msg1 = InputBox("Number", "Enter you'r phone number: ", " ");
+
+	if (maxRecords == 0) {
+	  MessageDlg("Error!!! Populate first!!! ", mtError, TMsgDlgButtons() << mbOK,0);	
+	} else {
+		for (int i = 0; i < maxRecords; i++) {
+		  oneLine = lstSupport->Items->Strings[i];
+		  aStuff[i].setData(getOneline(oneLine, 1),
+							getOneline(oneLine, 2),
+							getOneline(oneLine, 3),
+							getOneline(oneLine, 4));
+
+				if (msg1 == aStuff[i].getNumber()) {
+					ShowMessage(" Number Found !!!" + aStuff[i].getName());
+					numInd = i;
+				}
+
+		//Populate chats section......
+        oneLine2 = aStuff[i].getName();
+		chtBox->Items->Add(oneLine2);
+		}
+	}	
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::chtBoxClick(TObject *Sender)
+{
+    ShowMessage(AnsiString(chtBox->ItemIndex));
+}
+//---------------------------------------------------------------------------
+
+
+
+void __fastcall TForm1::chatClick(TObject *Sender)
+{
+    PageControl1->ActivePage = Convo;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::aboutClick(TObject *Sender)
+{
+	AnsiString mAb = InputBox("About", "Enter description about you: ", " ");
+
+	AnsiString oneLine;
+	AnsiString oneLine2;
+	AnsiString oneLine3;
+
+	TStreamWriter *outFile = new TStreamWriter("PhoneData.csv", true);
+
+	 for (int i = 0; i < lstSupport->Count; i++)
+	 {
+		oneLine = lstSupport->Items->Strings[i];
+			if (oneLine.Pos("\n") > 0){
+				oneLine2 = oneLine.SubString(1, oneLine.Pos("\n") - 1);
+				oneLine2 += ",";
+                oneLine2 += mAb;
+			}
+	 }
+
+}
+//---------------------------------------------------------------------------
+

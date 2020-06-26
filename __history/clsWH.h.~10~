@@ -1,0 +1,23 @@
+#ifndef clsWH
+#define clsWH
+
+class TbackWhat
+{
+
+	private:
+
+			AnsiString name;
+			AnsiString number;
+			AnsiString gender;
+			AnsiString prov;
+
+	public:
+
+		TbackWhat();
+		AnsiString getName();
+		AnsiString getNumber();
+		AnsiString getGender();
+        AnsiString getProv();
+};
+
+#endif

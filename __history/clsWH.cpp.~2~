@@ -1,0 +1,6 @@
+#include "clsWH.h"
+
+TbackWhat:: TbackWhat()
+{
+
+}

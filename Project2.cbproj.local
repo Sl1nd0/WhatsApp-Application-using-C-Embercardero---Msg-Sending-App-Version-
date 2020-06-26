@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2017/08/16 22:44:37.000.578,=C:\Users\Slindo\Documents\Embarcadero\Studio\Projects\Project2PCH1.h</Transaction>
+    <Transaction>2017/08/16 22:45:09.000.532,=C:\Users\Slindo\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>2017/10/10 18:28:56.000.460,=C:\Users\Slindo\Documents\Embarcadero\Studio\Projects\Project2PCH1.h</Transaction>
+    <Transaction>2017/10/10 18:29:12.000.934,=C:\Users\Slindo\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>2017/10/11 13:08:38.000.161,=C:\Users\Slindo\Documents\Embarcadero\Studio\Projects\Project2PCH1.h</Transaction>
+    <Transaction>2017/10/11 13:08:59.000.096,=C:\Users\Slindo\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>2017/10/11 13:23:29.000.365,=C:\Users\Slindo\Documents\Embarcadero\Studio\Projects\Project2PCH1.h</Transaction>
+    <Transaction>2017/10/11 13:24:04.000.196,=C:\Users\Slindo\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>2018/02/16 14:15:44.000.650,=C:\Users\Slindo\Documents\Embarcadero\Studio\Projects\Project2PCH1.h</Transaction>
+    <Transaction>2018/02/16 14:16:17.000.877,=C:\Users\Slindo\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>2018/02/16 17:45:49.000.800,=C:\Users\Slindo\Documents\Embarcadero\Studio\Projects\Project2PCH1.h</Transaction>
+    <Transaction>2018/02/16 17:46:23.000.487,=C:\Users\Slindo\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>2018/02/28 10:22:05.000.285,=C:\Users\Slindo\Documents\Embarcadero\Studio\Projects\Project2PCH1.h</Transaction>
+    <Transaction>2018/02/28 10:22:24.000.751,=C:\Users\Slindo\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>2018/02/28 10:23:55.000.086,=C:\Users\Slindo\Documents\Embarcadero\Studio\Projects\Project2PCH1.h</Transaction>
+    <Transaction>2018/02/28 10:24:16.000.783,=C:\Users\Slindo\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>2018/03/16 08:27:59.000.900,=C:\Users\Slindo\Documents\Embarcadero\Studio\Projects\Project2PCH1.h</Transaction>
+    <Transaction>2018/03/16 08:28:44.000.700,=C:\Users\Slindo\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>2018/03/16 08:39:20.000.350,C:\Users\Slindo\Documents\Embarcadero\Studio\Projects\aWhatSend\Unit1.dfm=C:\Users\Slindo\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2018/03/16 08:39:20.000.350,C:\Users\Slindo\Documents\Embarcadero\Studio\Projects\aWhatSend\Unit1.h=C:\Users\Slindo\Documents\Embarcadero\Studio\Projects\Unit1.h</Transaction>
+    <Transaction>2018/03/16 08:39:20.000.350,C:\Users\Slindo\Documents\Embarcadero\Studio\Projects\aWhatSend\Unit1.cpp=C:\Users\Slindo\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>2018/03/16 08:39:22.000.285,C:\Users\Slindo\Documents\Embarcadero\Studio\Projects\aWhatSend\Project2PCH1.h=C:\Users\Slindo\Documents\Embarcadero\Studio\Projects\Project2PCH1.h</Transaction>
+    <Transaction>2018/03/16 08:39:24.000.166,C:\Users\Slindo\Documents\Embarcadero\Studio\Projects\aWhatSend\Project2.cbproj=C:\Users\Slindo\Documents\Embarcadero\Studio\Projects\Project2.cbproj</Transaction>
+    <Transaction>2018/04/02 20:22:20.000.885,=C:\Users\Slindo\Documents\Embarcadero\Studio\Projects\aWhatSend\File1.h</Transaction>
+    <Transaction>2018/04/02 20:22:48.000.993,=C:\Users\Slindo\Documents\Embarcadero\Studio\Projects\aWhatSend\File1.cpp</Transaction>
+    <Transaction>2018/04/02 20:25:14.000.997,C:\Users\Slindo\Documents\Embarcadero\Studio\Projects\aWhatSend\File1.h=C:\Users\Slindo\Documents\Embarcadero\Studio\Projects\aWhatSend\clsWH.h</Transaction>
+    <Transaction>2018/04/02 20:25:29.000.159,C:\Users\Slindo\Documents\Embarcadero\Studio\Projects\aWhatSend\File1.cpp=C:\Users\Slindo\Documents\Embarcadero\Studio\Projects\aWhatSend\clsWH.cpp</Transaction>
+  </Transactions>
+</BorlandProject>

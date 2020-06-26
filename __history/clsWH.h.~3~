@@ -1,0 +1,13 @@
+#ifndef clsWH
+#define clsWH
+
+class TbackWhat
+{
+
+	private:
+
+	public:
+        TbackWhat();
+};
+
+#endif
